@@ -228,6 +228,7 @@ GET /api/v1/public/spot/tickers
 ```
 
 <a name="queryorderbook"/>
+
 #### Query Order book
 
 * Request：
@@ -267,6 +268,7 @@ GET /api/v1/public/spot/orderbook?ticker_id=BTCUSDT&depth=10
 
 
 <a name="querytradehistory"/>
+
 #### Query Trade History
 
 * Request：
