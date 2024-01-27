@@ -114,7 +114,7 @@ GET /api/v1/public/spot-products
 
 * Example Response:
 
-```json
+```javascript
 {
   "status": 0,
   "error": "OK",
@@ -169,7 +169,7 @@ GET /api/v1/public/spot/pairs
 
 * Example Response:
 
-```json
+```javascript
 
 {
   "success": true,
@@ -206,7 +206,7 @@ GET /api/v1/public/spot/tickers
 
 * Example Response:
 
-```json
+```javascript
 {
   "success": true,
   "result": [
@@ -239,7 +239,7 @@ GET /api/v1/public/spot/orderbook?ticker_id=BTCUSDT&depth=10
 
 * Example Response:
 
-```json
+```javascript
 
 {
   "success": true,
@@ -279,7 +279,7 @@ GET /api/v1/public/spot/historical-trades?ticker_id=BTC_USDT&limit=10&startTime=
 
 * Example Response:
 
-```json
+```javascript
 
 {
   "success": true,
@@ -332,7 +332,7 @@ GET /api/v1/public/spot-md/kline?symbol=BTCUSDT&interval=5m&from=1651382628000&t
 * Example Response
 *
 
-```json
+```javascript
 {
   "status": 0,
   "error": "OK",
@@ -396,7 +396,7 @@ GET /api/v1/private/spot-account/open-orders
 
 * Example Response
 
-```json
+```javascript
 {
   "status": 0,
   "error": "OK",
@@ -472,7 +472,7 @@ POST /api/v1/private/spot-trade/place-order
 
 * Example Response:
 
-```json
+```javascript
 {
   "status": 0,
   "error": "OK",
@@ -564,7 +564,7 @@ GET /api/v1/private/spot-account/balance
 
 * Response
 
-```json  
+```javascript  
 
 {
   "status": 0,
@@ -611,7 +611,7 @@ GET /api/v1/private/spot-account/trade-histories?symbol=ETHUSDT&orderId=1212131
 
 * Response:
 
-```json
+```javascript
 {
   "status": 0,
   "error": null,
@@ -686,7 +686,7 @@ GET /api/v1/private/spot-account/order-histories?symbol=BTCUSDT
 
 * Response:
 
-```json
+```javascript
 {
   "status": 0,
   "error": null,
@@ -761,47 +761,28 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
 
 **Payload:**
 
-```json
+```javascript
 {
-  "e": "kline",
-  // Event type
-  "E": 123456789,
-  // Event time
-  "s": "BTCUSDT",
-  // contract name  
-  "ct": "perpertual",
-  // contract type
+  "e": "kline",                 // Event type
+  "E": 123456789,               // Event time
+  "s": "BTCUSDT",               // Symbol
+  "ct": "perpertual",           // contract type
   "k": {
-    "t": 123400000,
-    // Kline start time
-    "T": 123460000,
-    // Kline close time   
-    "i": "1m",
-    // Interval
-    "f": 100,
-    // First trade ID
-    "L": 200,
-    // Last trade ID
-    "o": "0.0010",
-    // Open price
-    "c": "0.0020",
-    // Close price
-    "h": "0.0025",
-    // High price
-    "l": "0.0015",
-    // Low price
-    "v": "1000",
-    // Base asset volume
-    "n": 100,
-    // Number of trades
-    "x": false,
-    // Is this kline closed?
-    "q": "1.0000",
-    // Quote asset volume
-    "V": "500",
-    // Taker buy base asset volume
-    "Q": "0.500"
-    // Taker buy quote asset volume
+    "t": 123400000,             // Kline start time
+    "T": 123460000,             // Kline close time   
+    "i": "1m",                  // Interval
+    "f": 100,                   // First trade ID
+    "L": 200,                   // Last trade ID
+    "o": "0.0010",              // Open price
+    "c": "0.0020",              // Close price
+    "h": "0.0025",              // High price
+    "l": "0.0015",              // Low price
+    "v": "1000",                // Base asset volume
+    "n": 100,                   // Number of trades
+    "x": false,                 // Is this kline closed?
+    "q": "1.0000",              // Quote asset volume
+    "V": "500",                 // Taker buy base asset volume
+    "Q": "0.500"                // Taker buy quote asset volume
   }
 } 
 ```  
@@ -814,47 +795,28 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
 
 **Payload:**
 
-```json
+```javascript
 {
-  "e": "kline",
-  // Event type
-  "E": 123456789,
-  // Event time
-  "s": "BTCUSDT",
-  // contract name  
-  "ct": "perpertual",
-  // contract type
+  "e": "kline",                // Event type
+  "E": 123456789,              // Event time
+  "s": "BTCUSDT",              // contract name  
+  "ct": "perpertual",          // contract type
   "k": {
-    "t": 123400000,
-    // Kline start time
-    "T": 123460000,
-    // Kline close time   
-    "i": "1m",
-    // Interval
-    "f": 100,
-    // First trade ID
-    "L": 200,
-    // Last trade ID
-    "o": "0.0010",
-    // Open price
-    "c": "0.0020",
-    // Close price
-    "h": "0.0025",
-    // High price
-    "l": "0.0015",
-    // Low price
-    "v": "1000",
-    // Base asset volume
-    "n": 100,
-    // Number of trades
-    "x": false,
-    // Is this kline closed?
-    "q": "1.0000",
-    // Quote asset volume
-    "V": "500",
-    // Taker buy base asset volume
-    "Q": "0.500"
-    // Taker buy quote asset volume
+    "t": 123400000,            // Kline start time
+    "T": 123460000,            // Kline close time   
+    "i": "1m",                 // Interval
+    "f": 100,                  // First trade ID
+    "L": 200,                  // Last trade ID
+    "o": "0.0010",             // Open price
+    "c": "0.0020",             // Close price
+    "h": "0.0025",             // High price
+    "l": "0.0015",             // Low price
+    "v": "1000",               // Base asset volume
+    "n": 100,                  // Number of trades
+    "x": false,                // Is this kline closed?
+    "q": "1.0000",             // Quote asset volume
+    "V": "500",                // Taker buy base asset volume
+    "Q": "0.500"               // Taker buy quote asset volume
   }
 }  
 ```  
@@ -874,38 +836,25 @@ level include:
 
 **Payload:**
 
-```json
+```javascript
 {
-  "e": "depthUpdate",
-  // Event type
-  "E": 123456789,
-  // Event time
-  "T": 123456788,
-  // Transaction time 
-  "s": "BTCUSDT",
-  // Symbol
-  "U": 157,
-  // First update ID in event
-  "u": 160,
-  // Final update ID in event
-  "pu": 149,
-  // Final update Id in last stream(ie `u` in last stream)
-  "b": [
-    // Bids to be updated
+  "e": "depthUpdate", // Event type
+  "E": 123456789,     // Event time
+  "T": 123456788,     // Transaction time 
+  "s": "BTCUSDT",     // Symbol
+  "U": 157,           // First update ID in event
+  "u": 160,           // Final update ID in event
+  "pu": 149,          // Final update Id in last stream(ie `u` in last stream)
+  "b": [              // Bids to be updated
     [
-      "0.0024",
-      // Price level to be updated
-      "10"
-      // Quantity
+      "0.0024",       // Price level to be updated
+      "10"            // Quantity
     ]
   ],
-  "a": [
-    // Asks to be updated
+  "a": [              // Asks to be updated
     [
-      "0.0026",
-      // Price level to be updated
-      "100"
-      // Quantity
+      "0.0026",       // Price level to be updated
+      "100"           // Quantity
     ]
   ]
 }  
@@ -919,17 +868,17 @@ level include:
 
 **Payload:**
 
-```json
+```javascript
 {
-  "e": "trade",
-  "E": 1660148443864,
-  "T": 1660148443856,
-  "s": "btcusdt",
-  "t": 2978355,
-  "p": "24011.800000",
-  "q": "0.07600000",
+  "e": "trade",         // Event type
+  "E": 1660148443864,   // Event time
+  "T": 1660148443856,   // Trade time
+  "s": "btcusdt",       // Symbol
+  "t": 2978355,         // Trade Id
+  "p": "24011.800000",  // Price
+  "q": "0.07600000",    // Quantity
   "X": "MARKET",
-  "m": false
+  "m": false            // Is the order a market maker?
 }
 ```
 
@@ -945,7 +894,7 @@ for ws token management, please see [ws token management](#wstoken)
 
 **Order Update Payload:**
 
-```json
+```javascript
 {
   "at": "SPOT",
   "e": "ORDER_TRADE_UPDATE",
@@ -988,7 +937,7 @@ for ws token management, please see [ws token management](#wstoken)
 
 account update can have two kinds of data: balance and position
 
-```json
+```javascript
 {
   "at": "SPOT",
   "e": "ACCOUNT_UPDATE",
