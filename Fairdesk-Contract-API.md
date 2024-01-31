@@ -157,7 +157,7 @@ GET /api/v1/public/products
 
 * Example Response:
 
-```json
+```javascript
 {
   "status": 0,
   "error": "OK",
@@ -221,7 +221,7 @@ GET /api/v1/public/md/contracts
 
 * Example Response 
 
-```json
+```javascript
 {
   "success": true,
   "result": [
@@ -302,7 +302,7 @@ GET /api/v1/public/md/contract_specs
 
 * Example Response
 
-```json
+```javascript
 {
   "success": true,
   "result": [
@@ -330,7 +330,7 @@ the param symbol are symbol names from products response
 
 * Example Response
 
-```json
+```javascript
 {
   "status": 0,
   "error": "OK",
@@ -376,7 +376,7 @@ the param symbol are symbol names from products response
 
 * Example Response
 
-```json
+```javascript
  {
   "status": 0,
   "error": "OK",
@@ -449,7 +449,7 @@ the param symbol are symbol names from products response
 
 * Example Response
 
-```json
+```javascript
  {
   "status": 0,
   "error": "OK",
@@ -512,7 +512,7 @@ GET /api/v1/public/md/kline?symbol=BTCUSDT&interval=5m&from=1651382628000&to=165
 
 * Example Response
 *
-```json
+```javascript
 {
   "status": 0,
   "error": "OK",
@@ -566,7 +566,7 @@ GET /api/v1/private/account/current-positions?copyTradeFlag=true
 
 * Example Response
 
-```json
+```javascript
 {
   "status": 0,
   "error": "OK",
@@ -612,7 +612,7 @@ GET /api/v1/private/account/closed-positions?copyTradeFlag=true
 
 * Example Response
 
-```json
+```javascript
 {
   "status": 0,
   "error": "OK",
@@ -653,7 +653,7 @@ GET /api/v1/private/account/open-orders?copyTradeFlag=false
 
 * Example Response
 
-```json
+```javascript
 {
   "status": 0,
   "error": "OK",
@@ -768,7 +768,7 @@ POST /api/v1/private/trade/place-order
 
 * Example Response:
 
-```json
+```javascript
 {
   "status": 0,
   "error": "OK",
@@ -882,7 +882,7 @@ GET /api/v1/private/account/account?currency=USDT&copyTradeFlag=false
 
 * Response
 
-```json  
+```javascript  
 {
   "status": 0,
   "error": "OK",
@@ -907,7 +907,7 @@ GET /api/v1/private/account/balance?copyTradeFlag=false
 
 * Response
 
-```json  
+```javascript  
 {
   "status": 0,
   "error": "OK",
@@ -945,7 +945,7 @@ GET /api/v1/private/account/all-symbol-account
 
 * Example Response
 
-```json
+```javascript
 
 {
   "status": 0,
@@ -984,7 +984,7 @@ PUT  /api/v1/private/account/config/adjust-leverage
 
 * Response
 
-```json
+```javascript
 {
   "status": 0,
   "error": "OK",
@@ -1019,7 +1019,7 @@ please note that position mode can't be updated with open position or orders
 
 * Response
 
-```json
+```javascript
  {
   "status": 0,
   "error": "OK",
@@ -1069,7 +1069,7 @@ GET /api/v1/private/account/trade-histories?symbol=ETHUSDT&orderId=1212131
 
 * Response:
 
-```json
+```javascript
 {
   "status": 0,
   "error": null,
@@ -1127,7 +1127,7 @@ GET /api/v1/private/account/order-histories?symbol=BTCUSDT
 
 * Response:
 
-```json
+```javascript
 {
   "status": 0,
   "error": null,
@@ -1207,7 +1207,7 @@ GET /api/v1/private/account/transaction-histories?type=Transfer&symbol=BTCUSDT
 
 * Example Response
 
-```json
+```javascript
 
 {
   "status": 0,
@@ -1266,7 +1266,7 @@ m -> minutes; h -> hours; d -> days; w -> weeks; M -> months
 
 **Payload:**
 
-```json
+```javascript
 {
   "e": "kline",
   // Event type
@@ -1321,7 +1321,7 @@ Mark price and funding rate for a single symbol pushed every second.
 
 **Payload:**
 
-```json
+```javascript
    {
   "e": "kline",
   // Event type
@@ -1374,7 +1374,7 @@ Mark price and funding rate for a single symbol pushed every second.
 
 **Payload:**
 
-```json
+```javascript
 {
   "e": "kline",
   // Event type
@@ -1434,7 +1434,7 @@ level include:
 
 **Payload:**
 
-```json
+```javascript
 {
   "e": "depthUpdate",
   // Event type
@@ -1479,7 +1479,7 @@ level include:
 
 **Payload:**
 
-```json
+```javascript
 {
   "e": "trade",
   // Event type
@@ -1508,13 +1508,13 @@ level include:
 
 **Stream Name:** ${wsTokenFromApi}
 
-for ws token management, please see [ws token management](#wstoken)
+for ws token management, please see [ws token management](Fairdesk-API-Common.md#websocket-token)
 
-<a name="wsorderupdate">
+<a name="wsorderupdate"/>
 
 **Order Update Payload:**
 
-```json
+```javascript
 {
   "e": "ORDER_TRADE_UPDATE",
   "T": 1649678235588,
@@ -1554,13 +1554,13 @@ for ws token management, please see [ws token management](#wstoken)
 }
 ```
 
-<a name="wsaccountupdate">
+<a name="wsaccountupdate"/>
 
 **Account Update Payload:**
 
 account update can have two kinds of data: balance and position
 
-```json
+```javascript
 {
   "e": "ACCOUNT_UPDATE",
   "T": 1649678235588338434,
