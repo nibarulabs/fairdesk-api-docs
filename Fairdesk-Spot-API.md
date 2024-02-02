@@ -316,7 +316,7 @@ rate limit weight: 10
 * Example Request：
 
 ```
-GET /api/v1/public/spot-md/kline?symbol=BTCUSDT&interval=5m&from=1651382628000&to=1651469028000&limit=100
+GET /api/v1/public/md/kline?symbol=BTCUSDT&interval=5m&from=1651382628000&to=1651469028000&limit=100
 ```
 
 * Request param
