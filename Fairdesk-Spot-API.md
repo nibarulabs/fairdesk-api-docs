@@ -316,21 +316,21 @@ rate limit weight: 10
 * Example Request：
 
 ```
-GET /api/v1/public/md/kline?symbol=BTCUSDT&interval=5m&from=1651382628000&to=1651469028000&limit=100
+GET /api/v1/public/spot-md/klines?symbol=BTCUSDT&interval=5m&startTime=1651382628000&endTime=1651469028000
 ```
 
 * Request param
 
-| Field    | Type   | Description          | Default values |
-|----------|--------|----------------------|----------------|
-| symbol   | String | symbol name          |                |
-| interval | ENUM   | interval name        | 5m             |
-| from     | Long   | start milliseconds   |                |
-| to       | Long   | end milliseconds     |                |
-| limit    | Int    | date limit, max 1000 | 500            |
+| Field     | Type   | Description          | Default values |
+|-----------|--------|----------------------|----------------|
+| symbol    | String | symbol name          |                |
+| interval  | ENUM   | interval name        | 5m             |
+| startTime | Long   | start milliseconds   |                |
+| endTime   | Long   | end milliseconds     |                |
+
+You must fetch in a window of 500 candles.
 
 * Example Response
-*
 
 ```javascript
 {
